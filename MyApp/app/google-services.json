@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "611902745768",
+    "firebase_url": "https://battleship-4f208.firebaseio.com",
+    "project_id": "battleship-4f208",
+    "storage_bucket": "battleship-4f208.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611902745768:android:db8f453b4762524b",
+        "android_client_info": {
+          "package_name": "com.example.tanmay.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611902745768-ie520q7it0ecifg12gkhcg8ec0v7bggt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tanmay.myapp",
+            "certificate_hash": "fb9da52d12a1d82a350545d30385534c720b30e5"
+          }
+        },
+        {
+          "client_id": "611902745768-kb5is9ghkgp557g44idhk9f77p8furg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTg74qkNDVaFcrYlWUoZ3LDRIppou0s9U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611902745768-kb5is9ghkgp557g44idhk9f77p8furg3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
