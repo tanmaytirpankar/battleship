@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="debug">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_7dc15b753c78c28386ee3f7ff22be606c4751201.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_d63cc75e02c307ef510a9845c1b15586071c27cc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_c4117820b2110a90d8ba9eca34a6b25ac6a2a2fa.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_572ebf5b2a849c10c908e4bfe7b3027d6b4f0028.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_ab829b2da46c15f73771bec5f3ffdb9002a9eb77.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_d6f4cfc67df5dfa5e1836d6e75d750c48c114c82.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/debug_e3fd676488cba1f196c818cf5fb0587b0bc3989a.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_6ce014ebc7dbc6aaa02917b4f28601d1b9023b83.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_77d6102cd677baaa9cf274f862a68d08f7277514.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_dac767f81a4f8e604d34c6fcb2853da7733730f5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_337fea5f63511cbee2131745fc2372ab82bcf347.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_4a3e6c6a8746a82b91adeeb3487fdd4bc137baf2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_e057c75fca592c6d8dc1a37223f13b2ea7248c7b.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_4f1c76bafb7fa5dde3b3ae159085383c7b74fdd3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_a5fd99e6a5eef2da6a6a1372328292287b6843d4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_cb19515c47378e031d296c078e2e466d980ebc58.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_4183b480bf384e7fb2868f316a6aab94930c6792.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_3d07667e558d8c366cef40ef559df1e9316f5854.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_b4222d54d2ff505deeb88597c502047afb48d0b0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MyApp/app/build/intermediates/pre-dexed/debug/classes_b3f6b65101d193318aac81242f535f78cc334d8a.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

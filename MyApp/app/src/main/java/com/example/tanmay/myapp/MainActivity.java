@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         final GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this));
         final Button button= (Button) findViewById(R.id.nextb);
+        Button button1=(Button) findViewById(R.id.set);
+        Button button2=(Button)findViewById(R.id.reset);
         final DatabaseReference gameData = FirebaseDatabase.getInstance().getReference();
 
         gameData.child("playerno").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -61,22 +63,49 @@ public class MainActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
-        Toast.makeText(MainActivity.this,""+playerno[0],Toast.LENGTH_SHORT).show();
+
+        button1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Init init=new Init(shipspositions[0],shipspositions[1],shipspositions[2],shipspositions[3],shipspositions[4]);
+                if(playerno[0]==1)
+                    gameData.child("init1").setValue(init);
+                else
+                    gameData.child("init2").setValue(init);
+
+            }
+    });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ImageAdapter imageAdapter=(ImageAdapter)gridview.getAdapter();
+                imageAdapter.count=0;
+                img1.setImageResource(R.drawable.ship);
+                img2.setImageResource(R.drawable.ship);
+                img3.setImageResource(R.drawable.ship);
+                img4.setImageResource(R.drawable.ship);
+                img5.setImageResource(R.drawable.ship);
+                for (int i = 0; i < 5; i++) {
+                    imageAdapter.changeToBlank(shipspositions[i]);
+                }
+            }
+        });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gameData.child("playerno").addValueEventListener(new ValueEventListener() {
+                gameData.child("playerno").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         int temp =dataSnapshot.getValue(int.class);
                         if(temp==2) {
                             Intent nextActivity = new Intent(MainActivity.this, GameActivity.class);
                             nextActivity.putExtra("shipPos", shipspositions);
-                            nextActivity.putExtra("playerno", playerno);
+                            nextActivity.putExtra("playerno", playerno[0]);
+                            finish();
                             startActivity(nextActivity);
                         }
                         else {
-                            Toast.makeText(MainActivity.this,"Waiting for another player",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"Waiting for other player",Toast.LENGTH_SHORT).show();
                         }
                     }
                     @Override
@@ -89,30 +118,30 @@ public class MainActivity extends AppCompatActivity {
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Toast.makeText(MainActivity.this, "" + position,
-                        Toast.LENGTH_SHORT).show();
                 ImageAdapter imgadapter= (ImageAdapter) gridview.getAdapter();
-                imgadapter.changeToShip(position);
-                gridview.setAdapter(imgadapter);
-                if(imgadapter.count==1) {
-                    img1.setImageResource(R.drawable.blank);
-                    shipspositions[0]=position;
-                }
-                else if(imgadapter.count==2) {
-                    img2.setImageResource(R.drawable.blank);
-                    shipspositions[1]=position;
-                }
-                else if(imgadapter.count==3) {
-                    img3.setImageResource(R.drawable.blank);
-                    shipspositions[2]=position;
-                }
-                else if(imgadapter.count==4) {
-                    img4.setImageResource(R.drawable.blank);
-                    shipspositions[3]=position;
-                }
-                else if(imgadapter.count==5) {
-                    img5.setImageResource(R.drawable.blank);
-                    shipspositions[4]=position;
+                if(imgadapter.count<5){
+                    imgadapter.changeToShip(position);
+                    gridview.setAdapter(imgadapter);
+                    if(imgadapter.count==1) {
+                        img1.setImageResource(R.drawable.blank);
+                        shipspositions[0]=position;
+                    }
+                    else if(imgadapter.count==2) {
+                        img2.setImageResource(R.drawable.blank);
+                        shipspositions[1]=position;
+                    }
+                    else if(imgadapter.count==3) {
+                        img3.setImageResource(R.drawable.blank);
+                        shipspositions[2]=position;
+                    }
+                    else if(imgadapter.count==4) {
+                        img4.setImageResource(R.drawable.blank);
+                        shipspositions[3]=position;
+                    }
+                    else if(imgadapter.count==5) {
+                        img5.setImageResource(R.drawable.blank);
+                        shipspositions[4]=position;
+                    }
                 }
             }
         });

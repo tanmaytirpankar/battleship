@@ -6,16 +6,9 @@ package com.example.tanmay.myapp;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class AltActivity extends AppCompatActivity {
 
@@ -31,8 +24,8 @@ public class AltActivity extends AppCompatActivity {
     public void onPlayClick(View view)
     {
         Intent intent = new Intent(this, MainActivity.class);
+        finish();
         startActivity(intent);
-
     }
 
     public void onRulesClick(View view) {

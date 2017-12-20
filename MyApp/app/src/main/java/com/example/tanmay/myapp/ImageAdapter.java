@@ -69,4 +69,37 @@ public class ImageAdapter extends BaseAdapter {
         mThumbIds[position]=R.drawable.miss;
         notifyDataSetChanged();
     }
+    public void changeToBlank(int position)
+    {
+        mThumbIds[position]=R.drawable.blank;
+        notifyDataSetChanged();
+    }
+    public void myturn(int[] hisships,int[] hisdestroyedships,int[] hisgrid)
+    {
+        for (int i = 0; i < 25; i++) {
+            if (hisgrid[i] == -1)
+                changeToBlank(i);
+            else
+                changeToMiss(i);
+        }
+        for (int i = 0; i < 5; i++) {
+            if(hisdestroyedships[i]==1)
+                changeToHit(hisships[i]);
+        }
+    }
+    public void histurn(int[] myships,int[] mydestroyedships,int[] mygrid)
+    {
+        for (int i = 0; i < 25; i++) {
+            if (mygrid[i]==-1)
+                changeToBlank(i);
+            else
+                changeToMiss(i);
+        }
+        for (int i = 0; i < 5; i++) {
+            if(mydestroyedships[i]==1)
+                changeToHit(myships[i]);
+            else if(mydestroyedships[i]==-1)
+                changeToShip(myships[i]);
+        }
+    }
 }

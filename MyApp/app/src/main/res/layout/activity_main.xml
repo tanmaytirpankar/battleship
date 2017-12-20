@@ -9,6 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/back"
     tools:context="com.example.tanmay.myapp.AltActivity"
     >
 
@@ -54,9 +55,34 @@
             android:layout_height="match_parent"/>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/nextb"
-        android:layout_width="match_parent"
-        android:layout_height="63dp"
-        android:text="Next" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="63dp">
+
+        <Button
+            android:id="@+id/nextb"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Next" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/set"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="Set ships" />
+
+    </RelativeLayout>
+
 </LinearLayout>
